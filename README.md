@@ -10,7 +10,7 @@ Output spatial data are available for download from Harvard Dataverse: [https://
 
 #### Contents
 
-* [1_mapping](./1_mapping) contains code used to model/map current, potential, and unrealized potential carbon stored in aboveground, belowground, and soil organic matter at the 500m spatial resolution.
+* [1_mapping](./1_mapping) contains code used to model/map current, potential, and unrealized potential carbon in aboveground biomass, belowground biomass, and soil organic matter at the 500m spatial resolution.
 * [2_analysis](./2_analysis) contains code used to summarize global carbon stocks using raster-based zonal statistics.
 * [classes](./classes) contains CSVs used to identify classes in zonal rasters.
 
