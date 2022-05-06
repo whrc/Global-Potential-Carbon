@@ -3,7 +3,7 @@
 This repository contains code central to the analysis reported by Walker et al. (2022) on the global potential for increased storage of carbon on land. Spatial output data are available for download from [https://doi.org/10.7910/DVN/DSDDQK](https://doi.org/10.7910/DVN/DSDDQK).
 
 <p align="center">
-	<img src="./output_maps.png" alt="Global maps of carbon storage" width="80%" syle="border: 1px solid #000000;"/>
+	<img src="./output_maps.png" alt="Global maps of carbon storage" width="80%" style="border: 1px solid #000000;"/>
 </p>
 
 ### Files
