@@ -1,6 +1,8 @@
 # Global-Potential-Carbon
 
-This repository contains code central to the analysis reported by Walker et al. (2022) on the global potential for increased storage of carbon on land. Output spatial data are available for download from the Harvard Dataverse at [https://doi.org/10.7910/DVN/DSDDQK](https://doi.org/10.7910/DVN/DSDDQK).
+This repository contains code central to the analysis reported by Walker et al. (2022) on the global potential for increased storage of carbon on land.
+
+Output spatial data are available for download from the Harvard Dataverse at [https://doi.org/10.7910/DVN/DSDDQK](https://doi.org/10.7910/DVN/DSDDQK).
 
 <p align='center'>
 	<img src='./output_maps.png' alt='Global maps of carbon storage from Walker et al. (2022).' width='80%'/>
