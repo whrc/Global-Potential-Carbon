@@ -1,0 +1,6 @@
+cons_code,cons_name
+1,cropland (not shifting ag)
+2,cropland (shifting ag)
+3,rangeland
+4,pasture
+5,urban
