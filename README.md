@@ -10,6 +10,7 @@ This repository contains code central to the analysis reported by Walker et al. 
 
 * [1_mapping](./1_mapping) contains code used to model/map current, potential, and unrealized potential carbon stored in aboveground, belowground, and soil organic matter at the 500m spatial resolution.
 * [2_analysis](./2_analysis) contains code used to summarize global carbon stocks using raster-based zonal statistics.
+* [classes](./classes) contains CSVs used to identify classes in zonal rasters.
 
 ##### License
 
