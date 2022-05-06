@@ -2,19 +2,19 @@
 
 This repository contains code central to the analysis reported by Walker et al. (2022) on the global potential for increased storage of carbon on land.
 
-Output spatial data are available for download from the Harvard Dataverse at [https://doi.org/10.7910/DVN/DSDDQK](https://doi.org/10.7910/DVN/DSDDQK).
+Output spatial data are available for download from Harvard Dataverse: [https://doi.org/10.7910/DVN/DSDDQK](https://doi.org/10.7910/DVN/DSDDQK).
 
 <p align='center'>
 	<img src='./output_maps.png' alt='Global maps of carbon storage from Walker et al. (2022).' width='80%'/>
 </p>
 
-##### Contents
+#### Contents
 
 * [1_mapping](./1_mapping) contains code used to model/map current, potential, and unrealized potential carbon stored in aboveground, belowground, and soil organic matter at the 500m spatial resolution.
 * [2_analysis](./2_analysis) contains code used to summarize global carbon stocks using raster-based zonal statistics.
 * [classes](./classes) contains CSVs used to identify classes in zonal rasters.
 
-##### License
+#### License
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND)](http://creativecommons.org/licenses/by-nc-nd/4.0/). You may not use this work for commercial purposes; if you transform or build upon this work, you may not distribute the modified version. You must cite the paper when using any of this repository's contents for any purpose:
 
