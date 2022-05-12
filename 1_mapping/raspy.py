@@ -6,7 +6,7 @@
 from osgeo import gdal, osr
 import numpy as np
 import subprocess as sp
-import os, inspect
+import os
 
 def get_nodata(raster_file, band = 1):
 	"""Get raster nodata value"""

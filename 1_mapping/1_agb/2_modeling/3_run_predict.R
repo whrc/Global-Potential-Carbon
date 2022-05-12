@@ -62,7 +62,7 @@ predict.function <- function(preds, model, filename) {
 #------------------------------------------------------------------------------
 ### Check if output already exists. If not, run prediction.
 params$gs.out.dir <- sub("/$", "", params$gs.out.dir) # Remove trailing /
-gs.out.file <- paste0(params$gs.out.dir, '/', region, "_biomass_", actual.year, "_", tile.id, "_raw.tif")
+gs.out.file <- paste0(params$gs.out.dir, '/', region, "_AGB_500m_", actual.year, "_", tile.id, "_raw.tif")
 check.exists <- system(paste('gsutil -q ls', gs.out.file))
 
 if (check.exists != 0) {
