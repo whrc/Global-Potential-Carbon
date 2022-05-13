@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Creates a 500m raster of woody root:shoot ratios by Dinerstein et al. biome and ecoregion
 
-import sys, os
+import sys
 import pandas as pd
 from progressbar import *
 from raspy import *
@@ -11,14 +11,14 @@ from raspy import *
 # ---------------------------------------------------------------------------------------------
 
 # current ca. 2016 aboveground biomass (Mg/ha)
-cur_agb_tif = '/home/sgorelik/data/agb/global_actual_biomass_2016_v6_blend_a95_f03_w75_clp.tif'
+cur_agb_tif = 'Current_AGB_MgCha_500m.tif'
 cur_agb_img = raster(cur_agb_tif, verbose = True)
 cur_agb_nd = get_nodata(cur_agb_tif)
 cur_agb_img[cur_agb_img == cur_agb_nd] = 0
 
 # rasterized Dinerstein et al. ecoregions
 eco_img = raster('ecoregions_500m.tif', verbose = True)
-eco_df = pd.read_csv('ecoregional_r2s_ratios.csv')
+eco_df = pd.read_csv('eco_r2s_ratios.csv')
 
 # rasterized Dinerstein et al. biomes
 biome_img = raster('biomes_500m.tif', verbose = True)
@@ -144,4 +144,3 @@ r2s_int_img = r2s_int_img.astype(int)
 
 gt, sr = get_gt_sr(cur_agb_tif)
 write_gtiff(r2s_int_img, 'Root2Shoot_Ratios_Scaled1e3.tif', dtype = 'UInt16', nodata = 0, gt = gt, sr = sr, stats = True, msg = True)
-
