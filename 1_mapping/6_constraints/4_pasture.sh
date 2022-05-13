@@ -11,7 +11,6 @@ gdal_calc.py \
     --format='GTiff' \
     --type='Byte' \
     --co='COMPRESS=LZW' \
-    --overwrite \
     --NoDataValue=0
 
 # downsample/reproject raster from ~10km/WGS84 to 500m/sinusoidal
