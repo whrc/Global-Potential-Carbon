@@ -1,8 +1,21 @@
 #!/usr/bin/env python3
-# replaces soc nodata value (-32767) with biomass nodata
-# value (-32768) for consistency 
 
-import sys
+# replaces SOC nodata value (-32767) with biomass nodata value (-32768) for consistency 
+
+# source:
+#  Sanderman, J., Hengl, T., and Fiske, G. 2017. The soil carbon debt of 12,000 years 
+#  of human land use. PNAS 114(36): 9575–9580. doi:10.1073/pnas.1706103114.
+# 
+# downloaded from:
+#  https://github.com/whrc/Soil-Carbon-Debt
+#
+# input soc rasters:
+# - top 2 m of soil
+# - units: MgC/ha
+# - res: 10 km
+# - values ≥ 0
+# - nodata = -32767
+
 from raspy import *
 
 def proc_soc(f_in, f_out):
