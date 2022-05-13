@@ -140,7 +140,7 @@ del biome_img
 # multiply ratios by scaling factor to save raster as integer rather than float
 r2s_int_img = np.copy(r2s_flt_img) * 1e3
 del r2s_flt_img
-r2s_int_img = r2s_int_img.astype(int)
+r2s_int_img = r2s_int_img.astype(np.int16)
 
 gt, sr = get_gt_sr(cur_agb_tif)
 write_gtiff(r2s_int_img, 'Root2Shoot_Ratios_Scaled1e3.tif', dtype = 'UInt16', nodata = 0, gt = gt, sr = sr, stats = True, msg = True)

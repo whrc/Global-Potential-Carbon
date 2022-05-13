@@ -3,7 +3,7 @@
 from raspy import *
 
 # root:shoot ratios
-f_r2s = '/home/sgorelik/data/pnas/Root2Shoot_Ratios_Scaled1e3.tif'
+f_r2s = 'Root2Shoot_Ratios_Scaled1e3.tif'
 r2s = raster(f_r2s, verbose = True)
 
 # apply scaling factor
@@ -36,7 +36,7 @@ def comp_bgb(r2s, f_agb, f_bgb):
 def main():
 	
 	# aboveground
-	f_agb_lst = ['/home/sgorelik/data/pnas/Current_AGB_Mgha_500m.tif', '/home/sgorelik/data/pnas/Potential_AGB_Mgha_500m.tif']
+	f_agb_lst = ['Current_AGB_Mgha_500m.tif', 'Potential_AGB_Mgha_500m.tif']
 	
 	# compute belowground
 	for f_agb in f_agb_lst:
