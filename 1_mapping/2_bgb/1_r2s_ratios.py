@@ -52,8 +52,8 @@ r2s_flt_img = np.full(biome_img.shape, fill_value = 0, dtype = np.float32)
 print('1. Boreal forests or taiga ...', flush = True)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-r2s_flt_img[(biome_img == 6) & (cur_agb_img <= 75)] = 0.392
-r2s_flt_img[(biome_img == 6) & (cur_agb_img  > 75)] = 0.239
+r2s_flt_img[(biome_img == 6) & (cur_agb_img <= 37.5)] = 0.392
+r2s_flt_img[(biome_img == 6) & (cur_agb_img  > 37.5)] = 0.239
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 print('2. Mangroves ...', flush = True)
@@ -81,19 +81,19 @@ for index, row in eco_df.iterrows():
 
         # Mokany: Temperate oak forest
         if mokany_biome == 'tof':
-            r2s_flt_img[(biome_img == 4) & (eco_img == eco_code) & (cur_agb_img > 70)] = 0.295
+            r2s_flt_img[(biome_img == 4) & (eco_img == eco_code) & (cur_agb_img > 35)] = 0.295
 
         # Mokany: Temperate eucalypt forest/plantation
         if mokany_biome == 'tef':
-            r2s_flt_img[(biome_img == 4) & (eco_img == eco_code) & (cur_agb_img < 50)] = 0.437
-            r2s_flt_img[(biome_img == 4) & (eco_img == eco_code) & (cur_agb_img >= 50) & (cur_agb_img <= 150)] = 0.275
-            r2s_flt_img[(biome_img == 4) & (eco_img == eco_code) & (cur_agb_img > 150)] = 0.2
+            r2s_flt_img[(biome_img == 4) & (eco_img == eco_code) & (cur_agb_img < 25)] = 0.437
+            r2s_flt_img[(biome_img == 4) & (eco_img == eco_code) & (cur_agb_img >= 25) & (cur_agb_img <= 75)] = 0.275
+            r2s_flt_img[(biome_img == 4) & (eco_img == eco_code) & (cur_agb_img > 75)] = 0.2
 
         # Mokany: Other temperate broadleaf forest/plantation
         if mokany_biome == 'otbf':
-            r2s_flt_img[(biome_img == 4) & (eco_img == eco_code) & (cur_agb_img < 75)] = 0.456
-            r2s_flt_img[(biome_img == 4) & (eco_img == eco_code) & (cur_agb_img >= 75) & (cur_agb_img <= 150)] = 0.226
-            r2s_flt_img[(biome_img == 4) & (eco_img == eco_code) & (cur_agb_img > 150)] = 0.241
+            r2s_flt_img[(biome_img == 4) & (eco_img == eco_code) & (cur_agb_img < 37.5)] = 0.456
+            r2s_flt_img[(biome_img == 4) & (eco_img == eco_code) & (cur_agb_img >= 37.5) & (cur_agb_img <= 75)] = 0.226
+            r2s_flt_img[(biome_img == 4) & (eco_img == eco_code) & (cur_agb_img > 75)] = 0.241
 
     pbar.update(index)
 pbar.finish()
@@ -104,31 +104,31 @@ del eco_img
 print('5. Temperate conifer forests ...', flush = True)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-r2s_flt_img[(biome_img == 5) & (cur_agb_img < 50)] = 0.403
-r2s_flt_img[(biome_img == 5) & (cur_agb_img >= 50) & (cur_agb_img <= 150)] = 0.292
-r2s_flt_img[(biome_img == 5) & (cur_agb_img > 150)] = 0.201
+r2s_flt_img[(biome_img == 5) & (cur_agb_img < 25)] = 0.403
+r2s_flt_img[(biome_img == 5) & (cur_agb_img >= 25) & (cur_agb_img <= 75)] = 0.292
+r2s_flt_img[(biome_img == 5) & (cur_agb_img > 75)] = 0.201
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 print('6. Tropical and subtropical coniferous forests ...', flush = True)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-r2s_flt_img[(biome_img == 3) & (cur_agb_img < 50)] = 0.403
-r2s_flt_img[(biome_img == 3) & (cur_agb_img >= 50) & (cur_agb_img <= 150)] = 0.292
-r2s_flt_img[(biome_img == 3) & (cur_agb_img > 150)] = 0.201
+r2s_flt_img[(biome_img == 3) & (cur_agb_img < 25)] = 0.403
+r2s_flt_img[(biome_img == 3) & (cur_agb_img >= 25) & (cur_agb_img <= 75)] = 0.292
+r2s_flt_img[(biome_img == 3) & (cur_agb_img > 75)] = 0.201
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 print('7. Tropical and subtropical dry broadleaf forests ...', flush = True)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-r2s_flt_img[(biome_img == 2) & (cur_agb_img <= 20)] = 0.563
-r2s_flt_img[(biome_img == 2) & (cur_agb_img  > 20)] = 0.275
+r2s_flt_img[(biome_img == 2) & (cur_agb_img <= 10)] = 0.563
+r2s_flt_img[(biome_img == 2) & (cur_agb_img  > 10)] = 0.275
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 print('8. Tropical and subtropical moist broadleaf forests ...', flush = True)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-r2s_flt_img[(biome_img == 1) & (cur_agb_img <= 125)] = 0.205
-r2s_flt_img[(biome_img == 1) & (cur_agb_img  > 125)] = 0.235
+r2s_flt_img[(biome_img == 1) & (cur_agb_img <= 62.5)] = 0.205
+r2s_flt_img[(biome_img == 1) & (cur_agb_img  > 62.5)] = 0.235
 
 # ---------------------------------------------------------------------------------------------
 # Write root:shoot ratio numpy array to raster
@@ -143,4 +143,4 @@ del r2s_flt_img
 r2s_int_img = r2s_int_img.astype(np.int16)
 
 gt, sr = get_gt_sr(cur_agb_tif)
-write_gtiff(r2s_int_img, 'Root2Shoot_Ratios_Scaled1e3.tif', dtype = 'UInt16', nodata = 0, gt = gt, sr = sr, stats = True, msg = True)
+write_gtiff(r2s_int_img, 'Root2Shoot_Ratios_Scaled1e3_500m.tif', dtype = 'UInt16', nodata = 0, gt = gt, sr = sr, stats = True, msg = True)
