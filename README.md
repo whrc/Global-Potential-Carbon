@@ -2,7 +2,7 @@
 
 This repository contains code central to:
 
-* Walker, W.S., S.R. Gorelik, S.C. Cook-Patton, A. Baccini, M.K. Farina, K.K. Solvik, P.W. Ellis, J. Sanderman, R.A. Houghton, S.M. Leavitt, C.R. Schwalm, and B.W. Griscom. 2022. **The global potential for increased storage of carbon on land.** *Proceedings of the National Academy of Sciences.* [doi:10.1073/pnas.2111312119](https://doi.org/10.1073/pnas.2111312119).
+* Walker, W.S., S.R. Gorelik, S.C. Cook-Patton, A. Baccini, M.K. Farina, K.K. Solvik, P.W. Ellis, J. Sanderman, R.A. Houghton, S.M. Leavitt, C.R. Schwalm, and B.W. Griscom. 2022. **The global potential for increased storage of carbon on land.** *Proceedings of the National Academy of Sciences*, [doi:10.1073/pnas.2111312119](https://doi.org/10.1073/pnas.2111312119).
 
 Output spatial data are available for download from Harvard Dataverse: [https://doi.org/10.7910/DVN/DSDDQK](https://doi.org/10.7910/DVN/DSDDQK).
 
