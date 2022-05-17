@@ -119,14 +119,6 @@ def dtype_bit_depth(dtype_str):
 	bit_depth = bit_depth_switcher.get(dtype_str, 0)
 	return bit_depth
 
-def r2n(raster_file, band = 1):
-	"""Load a raster from disk into a 2D numpy array in memory."""
-	print('WARNING: r2n() is depreciated, use raster() instead!', flush = True)
-	file = gdal.Open(raster_file)
-	img = file.GetRasterBand(band).ReadAsArray()
-	file = None
-	return img
-
 def raster(raster_file, bands = None, verbose = False):
 	"""Load single- or multi-band raster from disk into a 2- or 3-dimensional numpy array in memory.\nNote, bands must be INTEGER or LIST of integers, e.g., [1, 3, 6] = Bands 1, 3 and 6. There is no Band 0."""
 	if verbose: print('Reading {} ...'.format(raster_file), flush = True)
