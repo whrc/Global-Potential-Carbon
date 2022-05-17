@@ -6,8 +6,8 @@ from raspy import *
 # inputs
 # -----------------------------------------------------------------
 
-f_cur = 'global_actual_biomass_2016_v6_blend_a95_f03_w75.tif'
-f_pot = 'global_potential_biomass_v6_blend.tif'
+f_cur = 'global_actual_biomass_2016_v6_blend_a95_f03_w75_MgCha.tif'
+f_pot = 'global_potential_biomass_v6_blend_MgCha.tif'
 
 cur = raster(f_cur, verbose = True)
 pot = raster(f_pot, verbose = True)
@@ -54,13 +54,6 @@ pot[pot == nd] = 0
 
 cur[np.logical_or(lwp <= 75, lwp == 255)] = nd
 pot[np.logical_or(lwp <= 75, lwp == 255)] = nd
-
-# -----------------------------------------------------------------
-# convert units from biomass (Mg/ha) to carbon (MgC/ha)
-# -----------------------------------------------------------------
-
-cur[cur > 0] = np.rint(np.true_divide(cur[cur > 0], 2)).astype(np.int16)
-pot[pot > 0] = np.rint(np.true_divide(pot[pot > 0], 2)).astype(np.int16)
 
 # -----------------------------------------------------------------
 # outputs
