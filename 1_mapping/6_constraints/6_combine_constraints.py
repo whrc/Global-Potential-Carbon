@@ -30,9 +30,9 @@ cons[crop == 1] = 1 # cropland (not shifting ag)
 #  4 = urban
 
 gt, sr = get_gt_sr('gfsad_crop_mask_500m_with_shift_ag.tif')
-write_gtiff(cons, out_tif = 'global_constraints_500m.tif', dtype = 'Byte', gt = gt, sr = sr, nodata = 0, msg = True, stats = True)
+write_gtiff(cons, out_tif = 'Societal_Constraints_500m.tif', dtype = 'Byte', gt = gt, sr = sr, nodata = 0, msg = True, stats = True)
 
 # write table of class codes and names to CSV file
 dct = {'cons_code': [1, 2, 3, 4], 'cons_name': ['cropland (not shifting ag)', 'cropland (shifting ag)', 'pasture', 'urban']}
 df = pd.DataFrame.from_dict(dct)
-df.to_csv('constraint_codes_names.csv', index = False)
+df.to_csv('constraints.csv', index = False)
