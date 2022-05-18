@@ -5,7 +5,7 @@ from progressbar import *
 from raspy import *
 
 # current aboveground biomass density (Mg/ha)
-f_cur = 'Current_AGB_Mgha_500m.tif'
+f_cur = 'Base_Cur_AGB_Mgha_500m.tif'
 agb = raster(f_cur, verbose = True)
 agb_nd = get_nodata(f_cur)
 agb[agb == agb_nd] = 0

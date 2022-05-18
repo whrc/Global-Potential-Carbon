@@ -49,7 +49,7 @@ pot[np.logical_or(lwp <= 75, lwp == 255)] = nd_o
 # -----------------------------------------------------------------
 
 gt, sr = get_gt_sr(f_cur)
-write_gtiff(cur, 'Current_SOC_MgCha_500m.tif', dtype = 'Int16', gt = gt, sr = sr, nodata = nd_o, stats = True, msg = True)
+write_gtiff(cur, 'Base_Cur_SOC_MgCha_500m.tif', dtype = 'Int16', gt = gt, sr = sr, nodata = nd_o, stats = True, msg = True)
 
 gt, sr = get_gt_sr(f_pot)
-write_gtiff(pot, 'Potential_SOC_MgCha_500m.tif', dtype = 'Int16', gt = gt, sr = sr, nodata = nd_o, stats = True, msg = True)
+write_gtiff(pot, 'Base_Pot_SOC_MgCha_500m.tif', dtype = 'Int16', gt = gt, sr = sr, nodata = nd_o, stats = True, msg = True)

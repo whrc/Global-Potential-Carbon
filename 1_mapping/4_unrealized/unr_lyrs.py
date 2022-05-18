@@ -19,9 +19,9 @@ def main():
 	pools = ['AGB', 'BGB', 'SOC']
 	for pool in pools:
 		comp_unr(
-			f_cur_i = 'Current_{}_MgCha_500m.tif'.format(pool), 
-			f_pot_i = 'Potential_{}_MgCha_500m.tif'.format(pool), 
-			f_unr_o = 'Unrealized_{}_MgCha_500m.tif'.format(pool)
+			f_cur_i = 'Base_Cur_{}_MgCha_500m.tif'.format(pool), 
+			f_pot_i = 'Base_Pot_{}_MgCha_500m.tif'.format(pool), 
+			f_unr_o = 'Base_Unr_{}_MgCha_500m.tif'.format(pool)
 		)
 
 if __name__ == '__main__':

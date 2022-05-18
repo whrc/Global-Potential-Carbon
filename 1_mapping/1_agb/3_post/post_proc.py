@@ -60,7 +60,7 @@ pot[np.logical_or(lwp <= 75, lwp == 255)] = nd
 # -----------------------------------------------------------------
 
 gt, sr = get_gt_sr(f_cur)
-write_gtiff(cur, 'Current_AGB_MgCha_500m.tif', dtype = 'Int16', gt = gt, sr = sr, nodata = nd, stats = True, msg = True)
+write_gtiff(cur, 'Base_Cur_AGB_MgCha_500m.tif', dtype = 'Int16', gt = gt, sr = sr, nodata = nd, stats = True, msg = True)
 
 gt, sr = get_gt_sr(f_pot)
-write_gtiff(pot, 'Potential_AGB_MgCha_500m.tif', dtype = 'Int16', gt = gt, sr = sr, nodata = nd, stats = True, msg = True)
+write_gtiff(pot, 'Base_Pot_AGB_MgCha_500m.tif', dtype = 'Int16', gt = gt, sr = sr, nodata = nd, stats = True, msg = True)

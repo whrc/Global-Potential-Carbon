@@ -36,7 +36,7 @@ def comp_bgb(r2s, f_agb, f_bgb):
 def main():
 	
 	# aboveground inputs
-	f_agb_lst = ['Current_AGB_Mgha_500m.tif', 'Potential_AGB_Mgha_500m.tif']
+	f_agb_lst = ['Base_Cur_AGB_Mgha_500m.tif', 'Base_Pot_AGB_Mgha_500m.tif']
 	
 	# compute belowground
 	for f_agb in f_agb_lst:
