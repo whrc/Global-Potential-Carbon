@@ -4,7 +4,7 @@
 # warp2sin.R
 #
 # Purpose:
-# 	Reprojects a raster to the ~500m MODIS sinusoidal grid via nearest neighbor resampling.
+# 	Reprojects global raster to ~500m MODIS sinusoidal
 #
 # Usage:
 # 	./warp2sin.R <input.tif> [options]
@@ -39,7 +39,7 @@ opt.list <- list(
 opt.parser <- OptionParser(option_list = opt.list,
 						   usage = 'usage: %prog <input.tif> [options]\n',
 						   description = paste0('Reprojects a raster to match the CRS, resolution, and extent\n',
-						   					 'of WHRC\'s MODIS-based global biomass products.\n\n',
+						   					 'of our MODIS-based global biomass products.\n\n',
 						   					 'Arguments:\n', '\t<input.tif>\n', '\t\tRaster (GeoTIFF or VRT) to reproject'))
 
 inputs <- try(parse_args(opt.parser, positional_arguments = 1), silent = T)
