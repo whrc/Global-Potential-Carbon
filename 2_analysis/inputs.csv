@@ -1,76 +1,62 @@
-"variable","zonal","file","description","pixel_values","code_file","code_col","name_col"
-"bioclim",1,"gez_2010_sin500m_LW.tif","Bioclimate zones","codes","bioclims.csv","gez_code","gez_name"
-"gadm",1,"gadm36_0_sin500m.tif","Countries","codes","gadm36.csv","gadm_code","gadm_name"
-"igbp",1,"global_igbp_2016.tif","Land cover types","codes","igbp.csv","igbp_code","igbp_name"
-"ecoregion",1,"ecoregions2017_sin500m_ecoid.tif","Dinerstein et al. 2017 ecoregions","codes","ecoregions.csv","eco_id","eco_name"
-"biome",1,"ecoregions2017_sin500m_biomecode.tif","Dinerstein et al. 2017 biomes","codes","biomes.csv","biome_num","biome_name"
-"realm",1,"ecoregions2017_sin500m_realmcode.tif","Dinerstein et al. 2017 realms","codes","realms.csv","realm_num","realm_name"
-"ncs",1,"global_500m_ncs_zones_a90.tif","NCS activity categories","codes","ncs_opp_space.csv","ncs_code","ncs_name"
-"cons",1,"global_constraints_500m.tif","Constraints","codes","constraints.csv","cons_code","cons_name"
-"agb_act",0,"global_actual_biomass_2016_v6_blend_a95_f03_w75_clp.tif","Actual aboveground biomass","Mg/ha",NA,NA,NA
-"agb_pot",0,"global_potential_biomass_v6_blend_ndm_clp.tif","Potential aboveground biomass","Mg/ha",NA,NA,NA
-"agb_pot_adj",0,"global_potential_biomass_v6_blend_ndm_clp_adj.tif","Adjusted potential aboveground biomass","Mg/ha",NA,NA,NA
-"agb_unr",0,"global_unrealized_2016_AGB_Mgha.tif","Unrealized potential aboveground biomass","Mg/ha",NA,NA,NA
-"agb_unr_adj",0,"global_unrealized_2016_AGB_Mgha_adj.tif","Adjusted unrealized potential aboveground biomass","Mg/ha",NA,NA,NA
-"agb_pot_fc_bc_adj",0,"future_potential_bc_rcp85_y50_global_blend_pp_adj.tif","Adjusted potential aboveground biomass (future climate - bc)","Mg/ha",NA,NA,NA
-"agb_pot_fc_cc_adj",0,"future_potential_cc_rcp85_y50_global_blend_pp_adj.tif","Adjusted potential aboveground biomass (future climate - cc)","Mg/ha",NA,NA,NA
-"agb_pot_fc_gs_adj",0,"future_potential_gs_rcp85_y50_global_blend_pp_adj.tif","Adjusted potential aboveground biomass (future climate - gs)","Mg/ha",NA,NA,NA
-"agb_pot_fc_hd_adj",0,"future_potential_hd_rcp85_y50_global_blend_pp_adj.tif","Adjusted potential aboveground biomass (future climate - hd)","Mg/ha",NA,NA,NA
-"agb_pot_fc_he_adj",0,"future_potential_he_rcp85_y50_global_blend_pp_adj.tif","Adjusted potential aboveground biomass (future climate - he)","Mg/ha",NA,NA,NA
-"agb_pot_fc_ip_adj",0,"future_potential_ip_rcp85_y50_global_blend_pp_adj.tif","Adjusted potential aboveground biomass (future climate - ip)","Mg/ha",NA,NA,NA
-"agb_pot_fc_mc_adj",0,"future_potential_mc_rcp85_y50_global_blend_pp_adj.tif","Adjusted potential aboveground biomass (future climate - mc)","Mg/ha",NA,NA,NA
-"agb_pot_fc_mg_adj",0,"future_potential_mg_rcp85_y50_global_blend_pp_adj.tif","Adjusted potential aboveground biomass (future climate - mg)","Mg/ha",NA,NA,NA
-"agb_pot_fc_mi_adj",0,"future_potential_mi_rcp85_y50_global_blend_pp_adj.tif","Adjusted potential aboveground biomass (future climate - mi)","Mg/ha",NA,NA,NA
-"agb_pot_fc_mr_adj",0,"future_potential_mr_rcp85_y50_global_blend_pp_adj.tif","Adjusted potential aboveground biomass (future climate - mr)","Mg/ha",NA,NA,NA
-"agb_pot_fc_no_adj",0,"future_potential_no_rcp85_y50_global_blend_pp_adj.tif","Adjusted potential aboveground biomass (future climate - no)","Mg/ha",NA,NA,NA
-"agb_pot_fc_avg_adj",0,"future_potential_mean_rcp85_y50_global_blend_pp_adj.tif","Adjusted potential aboveground biomass (future climate - mean)","Mg/ha",NA,NA,NA
-"agb_pot_fc_med_adj",0,"future_potential_median_rcp85_y50_global_blend_pp_adj.tif","Adjusted potential aboveground biomass (future climate - median)","Mg/ha",NA,NA,NA
-"agb_unr_fc_bc_adj",0,"global_unrealized_AGB_fc_bc_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential aboveground biomass (future climate - bc)","Mg/ha",NA,NA,NA
-"agb_unr_fc_cc_adj",0,"global_unrealized_AGB_fc_cc_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential aboveground biomass (future climate - cc)","Mg/ha",NA,NA,NA
-"agb_unr_fc_gs_adj",0,"global_unrealized_AGB_fc_gs_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential aboveground biomass (future climate - gs)","Mg/ha",NA,NA,NA
-"agb_unr_fc_hd_adj",0,"global_unrealized_AGB_fc_hd_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential aboveground biomass (future climate - hd)","Mg/ha",NA,NA,NA
-"agb_unr_fc_he_adj",0,"global_unrealized_AGB_fc_he_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential aboveground biomass (future climate - he)","Mg/ha",NA,NA,NA
-"agb_unr_fc_ip_adj",0,"global_unrealized_AGB_fc_ip_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential aboveground biomass (future climate - ip)","Mg/ha",NA,NA,NA
-"agb_unr_fc_mc_adj",0,"global_unrealized_AGB_fc_mc_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential aboveground biomass (future climate - mc)","Mg/ha",NA,NA,NA
-"agb_unr_fc_mg_adj",0,"global_unrealized_AGB_fc_mg_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential aboveground biomass (future climate - mg)","Mg/ha",NA,NA,NA
-"agb_unr_fc_mi_adj",0,"global_unrealized_AGB_fc_mi_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential aboveground biomass (future climate - mi)","Mg/ha",NA,NA,NA
-"agb_unr_fc_mr_adj",0,"global_unrealized_AGB_fc_mr_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential aboveground biomass (future climate - mr)","Mg/ha",NA,NA,NA
-"agb_unr_fc_no_adj",0,"global_unrealized_AGB_fc_no_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential aboveground biomass (future climate - no)","Mg/ha",NA,NA,NA
-"agb_unr_fc_avg_adj",0,"global_unrealized_AGB_fc_mean_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential aboveground biomass (future climate - mean)","Mg/ha",NA,NA,NA
-"agb_unr_fc_med_adj",0,"global_unrealized_AGB_fc_median_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential aboveground biomass (future climate - median)","Mg/ha",NA,NA,NA
-"bgb_act",0,"global_actual_2016_BGB_Mgha.tif","Actual belowground biomass","Mg/ha",NA,NA,NA
-"bgb_pot",0,"global_potential_BGB_Mgha.tif","Potential belowground biomass","Mg/ha",NA,NA,NA
-"bgb_pot_adj",0,"global_potential_BGB_Mgha_adj.tif","Adjusted potential belowground biomass","Mg/ha",NA,NA,NA
-"bgb_unr",0,"global_unrealized_2016_BGB_Mgha.tif","Unrealized potential belowground biomass","Mg/ha",NA,NA,NA
-"bgb_unr_adj",0,"global_unrealized_2016_BGB_Mgha_adj.tif","Adjusted unrealized potential belowground biomass","Mg/ha",NA,NA,NA
-"bgb_pot_fc_bc_adj",0,"global_potential_BGB_fc_bc_rcp85_y50_Mgha_adj.tif","Adjusted potential belowground biomass (future climate - bc)","Mg/ha",NA,NA,NA
-"bgb_pot_fc_cc_adj",0,"global_potential_BGB_fc_cc_rcp85_y50_Mgha_adj.tif","Adjusted potential belowground biomass (future climate - cc)","Mg/ha",NA,NA,NA
-"bgb_pot_fc_gs_adj",0,"global_potential_BGB_fc_gs_rcp85_y50_Mgha_adj.tif","Adjusted potential belowground biomass (future climate - gs)","Mg/ha",NA,NA,NA
-"bgb_pot_fc_hd_adj",0,"global_potential_BGB_fc_hd_rcp85_y50_Mgha_adj.tif","Adjusted potential belowground biomass (future climate - hd)","Mg/ha",NA,NA,NA
-"bgb_pot_fc_he_adj",0,"global_potential_BGB_fc_he_rcp85_y50_Mgha_adj.tif","Adjusted potential belowground biomass (future climate - he)","Mg/ha",NA,NA,NA
-"bgb_pot_fc_ip_adj",0,"global_potential_BGB_fc_ip_rcp85_y50_Mgha_adj.tif","Adjusted potential belowground biomass (future climate - ip)","Mg/ha",NA,NA,NA
-"bgb_pot_fc_mc_adj",0,"global_potential_BGB_fc_mc_rcp85_y50_Mgha_adj.tif","Adjusted potential belowground biomass (future climate - mc)","Mg/ha",NA,NA,NA
-"bgb_pot_fc_mg_adj",0,"global_potential_BGB_fc_mg_rcp85_y50_Mgha_adj.tif","Adjusted potential belowground biomass (future climate - mg)","Mg/ha",NA,NA,NA
-"bgb_pot_fc_mi_adj",0,"global_potential_BGB_fc_mi_rcp85_y50_Mgha_adj.tif","Adjusted potential belowground biomass (future climate - mi)","Mg/ha",NA,NA,NA
-"bgb_pot_fc_mr_adj",0,"global_potential_BGB_fc_mr_rcp85_y50_Mgha_adj.tif","Adjusted potential belowground biomass (future climate - mr)","Mg/ha",NA,NA,NA
-"bgb_pot_fc_no_adj",0,"global_potential_BGB_fc_no_rcp85_y50_Mgha_adj.tif","Adjusted potential belowground biomass (future climate - no)","Mg/ha",NA,NA,NA
-"bgb_pot_fc_avg_adj",0,"global_potential_BGB_fc_mean_rcp85_y50_Mgha_adj.tif","Adjusted potential belowground biomass (future climate - mean)","Mg/ha",NA,NA,NA
-"bgb_pot_fc_med_adj",0,"global_potential_BGB_fc_median_rcp85_y50_Mgha_adj.tif","Adjusted potential belowground biomass (future climate - median)","Mg/ha",NA,NA,NA
-"bgb_unr_fc_bc_adj",0,"global_unrealized_BGB_fc_bc_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential belowground biomass (future climate - bc)","Mg/ha",NA,NA,NA
-"bgb_unr_fc_cc_adj",0,"global_unrealized_BGB_fc_cc_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential belowground biomass (future climate - cc)","Mg/ha",NA,NA,NA
-"bgb_unr_fc_gs_adj",0,"global_unrealized_BGB_fc_gs_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential belowground biomass (future climate - gs)","Mg/ha",NA,NA,NA
-"bgb_unr_fc_hd_adj",0,"global_unrealized_BGB_fc_hd_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential belowground biomass (future climate - hd)","Mg/ha",NA,NA,NA
-"bgb_unr_fc_he_adj",0,"global_unrealized_BGB_fc_he_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential belowground biomass (future climate - he)","Mg/ha",NA,NA,NA
-"bgb_unr_fc_ip_adj",0,"global_unrealized_BGB_fc_ip_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential belowground biomass (future climate - ip)","Mg/ha",NA,NA,NA
-"bgb_unr_fc_mc_adj",0,"global_unrealized_BGB_fc_mc_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential belowground biomass (future climate - mc)","Mg/ha",NA,NA,NA
-"bgb_unr_fc_mg_adj",0,"global_unrealized_BGB_fc_mg_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential belowground biomass (future climate - mg)","Mg/ha",NA,NA,NA
-"bgb_unr_fc_mi_adj",0,"global_unrealized_BGB_fc_mi_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential belowground biomass (future climate - mi)","Mg/ha",NA,NA,NA
-"bgb_unr_fc_mr_adj",0,"global_unrealized_BGB_fc_mr_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential belowground biomass (future climate - mr)","Mg/ha",NA,NA,NA
-"bgb_unr_fc_no_adj",0,"global_unrealized_BGB_fc_no_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential belowground biomass (future climate - no)","Mg/ha",NA,NA,NA
-"bgb_unr_fc_avg_adj",0,"global_unrealized_BGB_fc_mean_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential belowground biomass (future climate - mean)","Mg/ha",NA,NA,NA
-"bgb_unr_fc_med_adj",0,"global_unrealized_BGB_fc_median_rcp85_y50_Mgha_adj.tif","Adjusted unrealized potential belowground biomass (future climate - median)","Mg/ha",NA,NA,NA
-"soc_act",0,"SOCS_0_200cm_year_2010AD_500m_Mgha_wm.tif","Actual soil organic carbon matter","Mg/ha",NA,NA,NA
-"soc_pot",0,"SOCS_0_200cm_year_NoLU_500m_Mgha_wm.tif","Potential soil organic carbon matter","Mg/ha",NA,NA,NA
-"soc_pot_adj",0,"SOCS_0_200cm_year_NoLU_500m_Mgha_wm_adj.tif","Adjusted potential soil organic carbon matter","Mg/ha",NA,NA,NA
-"soc_unr",0,"SOCS_0_200cm_unrealized_500m_Mgha_wm.tif","Unrealized potential soil organic carbon matter","Mg/ha",NA,NA,NA
-"soc_unr_adj",0,"SOCS_0_200cm_unrealized_500m_Mgha_wm_adj.tif","Adjusted unrealized potential soil organic carbon matter","Mg/ha",NA,NA,NA
+"variable","zonal","file","pixel_values","code_file","code_col","name_col"
+"bcz",1,"Bioclimate_Zones_500m.tif","codes","bioclims.csv","bcz_code","bcz_name"
+"gadm",1,"gadm36_adm0_500m.tif","codes","gadm36.csv","gadm_code","gadm_name"
+"ncs",1,"NCS_Opportunity_Categories_500m.tif","codes","ncs_opp_space.csv","ncs_code","ncs_name"
+"cons",1,"Societal_Constraints_500m.tif","codes","constraints.csv","cons_code","cons_name"
+"agb_cur",0,"Base_Cur_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_pot",0,"Base_Pot_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_unr",0,"Base_Unr_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_cur",0,"Base_Cur_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_pot",0,"Base_Pot_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_unr",0,"Base_Unr_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"soc_cur",0,"Base_Cur_SOC_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"soc_pot",0,"Base_Pot_SOC_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"soc_unr",0,"Base_Unr_SOC_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_pot_rcp85_bc",0,"RCP85y50bc_Pot_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_pot_rcp85_cc",0,"RCP85y50cc_Pot_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_pot_rcp85_gs",0,"RCP85y50gs_Pot_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_pot_rcp85_hd",0,"RCP85y50hd_Pot_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_pot_rcp85_he",0,"RCP85y50he_Pot_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_pot_rcp85_ip",0,"RCP85y50ip_Pot_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_pot_rcp85_mc",0,"RCP85y50mc_Pot_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_pot_rcp85_mg",0,"RCP85y50mg_Pot_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_pot_rcp85_mi",0,"RCP85y50mi_Pot_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_pot_rcp85_mr",0,"RCP85y50mr_Pot_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_pot_rcp85_no",0,"RCP85y50no_Pot_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_pot_rcp85_mean",0,"RCP85y50mean_Pot_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_unr_rcp85_bc",0,"RCP85y50bc_Unr_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_unr_rcp85_cc",0,"RCP85y50cc_Unr_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_unr_rcp85_gs",0,"RCP85y50gs_Unr_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_unr_rcp85_hd",0,"RCP85y50hd_Unr_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_unr_rcp85_he",0,"RCP85y50he_Unr_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_unr_rcp85_ip",0,"RCP85y50ip_Unr_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_unr_rcp85_mc",0,"RCP85y50mc_Unr_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_unr_rcp85_mg",0,"RCP85y50mg_Unr_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_unr_rcp85_mi",0,"RCP85y50mi_Unr_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_unr_rcp85_mr",0,"RCP85y50mr_Unr_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_unr_rcp85_no",0,"RCP85y50no_Unr_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"agb_unr_rcp85_mean",0,"RCP85y50mean_Unr_AGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_pot_rcp85_bc",0,"RCP85y50bc_Pot_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_pot_rcp85_cc",0,"RCP85y50cc_Pot_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_pot_rcp85_gs",0,"RCP85y50gs_Pot_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_pot_rcp85_hd",0,"RCP85y50hd_Pot_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_pot_rcp85_he",0,"RCP85y50he_Pot_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_pot_rcp85_ip",0,"RCP85y50ip_Pot_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_pot_rcp85_mc",0,"RCP85y50mc_Pot_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_pot_rcp85_mg",0,"RCP85y50mg_Pot_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_pot_rcp85_mi",0,"RCP85y50mi_Pot_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_pot_rcp85_mr",0,"RCP85y50mr_Pot_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_pot_rcp85_no",0,"RCP85y50no_Pot_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_pot_rcp85_mean",0,"RCP85y50mean_Pot_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_unr_rcp85_bc",0,"RCP85y50bc_Unr_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_unr_rcp85_cc",0,"RCP85y50cc_Unr_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_unr_rcp85_gs",0,"RCP85y50gs_Unr_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_unr_rcp85_hd",0,"RCP85y50hd_Unr_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_unr_rcp85_he",0,"RCP85y50he_Unr_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_unr_rcp85_ip",0,"RCP85y50ip_Unr_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_unr_rcp85_mc",0,"RCP85y50mc_Unr_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_unr_rcp85_mg",0,"RCP85y50mg_Unr_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_unr_rcp85_mi",0,"RCP85y50mi_Unr_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_unr_rcp85_mr",0,"RCP85y50mr_Unr_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_unr_rcp85_no",0,"RCP85y50no_Unr_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
+"bgb_unr_rcp85_mean",0,"RCP85y50mean_Unr_BGB_MgCha_500m.tif","MgC/ha",NA,NA,NA
