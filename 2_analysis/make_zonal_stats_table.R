@@ -29,18 +29,18 @@ rasterOptions(tmpdir = '~/tmp/r')
 # - - - - - - - - - - - -
 
 opt.list <- list(
-  make_option(c('-s', '--split'), type = 'integer', default = 100, help = 'Division applied to each side of the input rasters (e.g.,\n\t\ts = 4 gives 16 tiles) (default is %default)'),
-  make_option(c('--overwrite'), action = 'store_true', default = FALSE, help = 'Overwite ouput CSV file if it exists? (default is no)')
+	make_option(c('-s', '--split'), type = 'integer', default = 100, help = 'Division applied to each side of the input rasters (e.g.,\n\t\ts = 4 gives 16 tiles) (default is %default)'),
+	make_option(c('--overwrite'), action = 'store_true', default = FALSE, help = 'Overwite ouput CSV file if it exists? (default is no)')
 )
 
 opt.parser <- OptionParser(option_list = opt.list,
-                           usage = 'usage: %prog <input_parameters.csv> <carbon_summary.csv> [options]\n',
-                           description = paste0('Computes a zonal summary of global carbon rasters.\n\n',
-                                                'Arguments:\n',
-                                                '\t<inputs.csv>\n',
-                                                '\t\tCSV file containing paths to input raster files\n\n',
-                                                '\t<carbon_summary.csv>\n',
-                                                '\t\tCSV file to save output carbon summary'))
+						   usage = 'usage: %prog <input_parameters.csv> <carbon_summary.csv> [options]\n',
+						   description = paste0('Computes a zonal summary of global carbon rasters.\n\n',
+						   					 'Arguments:\n',
+						   					 '\t<inputs.csv>\n',
+						   					 '\t\tCSV file containing paths to input raster files\n\n',
+						   					 '\t<carbon_summary.csv>\n',
+						   					 '\t\tCSV file to save output carbon summary'))
 
 # - - - - - - - - - - - -
 # Parse user parameters
@@ -58,13 +58,13 @@ overwrite.flag <- opt$overwrite
 if (is.null(csv.in)) stop('input CSV required.') else cat(paste('Input:', csv.in), fill = T)
 
 if (is.null(csv.out)) {
-  stop('output CSV path required.')
+	stop('output CSV path required.')
 } else if (!file.exists(csv.out)) {
-  cat(paste('Output:', csv.out), fill = T)
+	cat(paste('Output:', csv.out), fill = T)
 } else if (file.exists(csv.out) & isTRUE(overwrite.flag)) {
-  cat(paste('Output:', csv.out, 'will be overwritten.'), fill = T)
+	cat(paste('Output:', csv.out, 'will be overwritten.'), fill = T)
 } else if (file.exists(csv.out) & !isTRUE(overwrite.flag)) {
-  stop(paste('output CSV file exists. Must set --overwrite flag to overwrite', csv.out))
+	stop(paste('output CSV file exists. Must set --overwrite flag to overwrite', csv.out))
 }
 
 # - - - - - - - - - - - -
@@ -80,20 +80,20 @@ for (v in col.hdrs) if(!v %in% colnames(df.in)) { stop(paste0('column named \"',
 # check that input raster files exist
 df.in$file_exists <- file.exists(df.in$file)
 if (!all(df.in$file_exists)) {
-  df.in.na <- df.in %>%
-    filter(file_exists == F) %>%
-    dplyr::select(variable, file)
-  stop('could not find:', paste0('\n  ', sprintf("% 2s", 1:nrow(df.in.na)), '. ', sprintf("%-18s", df.in.na$variable), ' ', df.in.na$file))
+	df.in.na <- df.in %>%
+		filter(file_exists == F) %>%
+		dplyr::select(variable, file)
+	stop('could not find:', paste0('\n  ', sprintf("% 2s", 1:nrow(df.in.na)), '. ', sprintf("%-18s", df.in.na$variable), ' ', df.in.na$file))
 }
 
 # check that input class code name files exist
 df.test <- df.in %>% filter(pixel_values == 'codes') %>% select(variable, code_file)
 df.test$code_file_exists <- file.exists(df.test$code_file)
 if (!all(df.test$code_file_exists)) {
-  df.in.na <- df.test %>%
-    filter(code_file_exists == F) %>%
-    dplyr::select(variable, code_file)
-  stop('could not find:', paste0('\n  ', sprintf("% 2s", 1:nrow(df.in.na)), '. ', sprintf("%-18s", df.in.na$variable), ' ', df.in.na$code_file))
+	df.in.na <- df.test %>%
+		filter(code_file_exists == F) %>%
+		dplyr::select(variable, code_file)
+	stop('could not find:', paste0('\n  ', sprintf("% 2s", 1:nrow(df.in.na)), '. ', sprintf("%-18s", df.in.na$variable), ' ', df.in.na$code_file))
 }
 
 # get list of input rasters
@@ -102,7 +102,7 @@ tifs <- df.in$file
 # and their shorthand names
 vars <- df.in$variable
 
-# get biomass density varaible names
+# get biomass density variable names
 bio.vars <- df.in$variable[df.in$zonal == 0]
 
 # get zonal variable names
@@ -146,43 +146,34 @@ tile.chunks <- chunk(1:nrow(df.tiles), n = num.chunks)
 df.all <- data.frame()
 pb <- txtProgressBar(min = 0, max = num.chunks, initial = 0, style = 3)
 for (c in 1:num.chunks) {
-  tile.chunk <- tile.chunks[[c]]
-  df.chunk <- foreach(t = tile.chunk, .combine = rbind) %dopar% {
+	tile.chunk <- tile.chunks[[c]]
+	df.chunk <- foreach(t = tile.chunk, .combine = rbind) %dopar% {
 
-    # extract only subwindow of global rasters
-    i <- df.tiles$i[t]
-    j <- df.tiles$j[t]
-    df.tile.values <- as.data.frame(getValuesBlock(r, row = (j * y/s), nrows = (y/s), col = (i * x/s), ncols = (x/s)))
+		# extract only subwindow of global rasters
+		i <- df.tiles$i[t]
+		j <- df.tiles$j[t]
+		df.tile.values <- as.data.frame(getValuesBlock(r, row = (j * y/s), nrows = (y/s), col = (i * x/s), ncols = (x/s)))
 
-    # summarize biomass by zones and calculate SOC inside and outside of AGB (call new columns "forest" and "other", respectively)
-    df.tile.sum <- df.tile.values %>%
-        mutate_at(vars(one_of(bio.vars)), .funs = function(x) { ifelse(is.na(x), 0, x) }) %>%
-        mutate_at(vars(one_of(bio.vars)), .funs = function(x) { x * px.ha }) %>%
-        mutate(forest_soc_act = ifelse(!is.na(agb_act) & agb_act > 0, soc_act, NA),
-               forest_soc_pot = ifelse(!is.na(agb_pot) & agb_pot > 0, soc_pot, NA),
-               forest_soc_pot_adj = ifelse(!is.na(agb_pot_adj) & agb_pot_adj > 0, soc_pot_adj, NA),
-               forest_soc_unr = ifelse(!is.na(agb_unr) & agb_unr > 0, soc_unr, NA),
-               forest_soc_unr_adj = ifelse(!is.na(agb_unr_adj) & agb_unr_adj > 0, soc_unr_adj, NA),
-               other_soc_act = ifelse(is.na(agb_act) | agb_act == 0, soc_act, NA),
-               other_soc_pot = ifelse(is.na(agb_pot) | agb_pot == 0, soc_pot, NA),
-               other_soc_pot_adj = ifelse(is.na(agb_pot_adj) | agb_pot_adj == 0, soc_pot_adj, NA),
-               other_soc_unr = ifelse(is.na(agb_unr) | agb_unr == 0, soc_unr, NA),
-               other_soc_unr_adj = ifelse(is.na(agb_unr_adj) | agb_unr_adj == 0, soc_unr_adj, NA)) %>%
-        group_by_at(vars(one_of(zone.vars))) %>%
-        summarize_all(sum, na.rm = T) %>%
-        as.data.frame()
+		# summarize biomass by zones
+		df.tile.sum <- df.tile.values %>%
+			mutate_at(vars(one_of(bio.vars)), .funs = function(x) { ifelse(is.na(x), 0, x) }) %>%
+			mutate_at(vars(one_of(bio.vars)), .funs = function(x) { x * px.ha }) %>%
+			rename_at(vars(one_of(bio.vars)), .funs = function(x) { paste0(x, '_mgc') }) %>%
+			group_by_at(vars(one_of(zone.vars))) %>%
+			summarize_all(sum, na.rm = T) %>%
+			as.data.frame()
 
-    return(df.tile.sum)
-  }
-  df.all <- rbind(df.all, df.chunk)
-  setTxtProgressBar(pb, c)
+		return(df.tile.sum)
+	}
+	df.all <- rbind(df.all, df.chunk)
+	setTxtProgressBar(pb, c)
 }
 
 # summarize all foreach results again by zonal groups
 df.sum <- df.all %>%
-  group_by_at(vars(one_of(zone.vars))) %>%
-  summarize_all(sum, na.rm = T) %>%
-  as.data.frame()
+	group_by_at(vars(one_of(zone.vars))) %>%
+	summarize_all(sum, na.rm = T) %>%
+	as.data.frame()
 
 # ---------------------------------------------------------------------------------------------
 # Add class names
@@ -191,17 +182,17 @@ df.sum <- df.all %>%
 cat('\nAdding class names ...', fill = T)
 
 df.codes <- df.in %>%
-  dplyr::filter(pixel_values == 'codes') %>%
-  dplyr::select(variable, code_file, code_col, name_col)
+	dplyr::filter(pixel_values == 'codes') %>%
+	dplyr::select(variable, code_file, code_col, name_col)
 
 for (row in 1:nrow(df.codes)) {
-  code.row <- df.codes[row,]
-  zone.var <- code.row$variable
-  code.csv <- code.row$code_file
-  code.col <- code.row$code_col
-  name.col <- code.row$name_col
-  df.zones <- read.csv(code.csv, header = T) %>% dplyr::select(one_of(code.col, name.col)) %>% as.data.frame()
-  df.sum <- merge(df.zones, df.sum, by.x = code.col, by.y = zone.var, all = T)
+	code.row <- df.codes[row,]
+	zone.var <- code.row$variable
+	code.csv <- code.row$code_file
+	code.col <- code.row$code_col
+	name.col <- code.row$name_col
+	df.zones <- read.csv(code.csv, header = T) %>% dplyr::select(one_of(code.col, name.col)) %>% as.data.frame()
+	df.sum <- merge(df.zones, df.sum, by.x = code.col, by.y = zone.var, all = T)
 }
 
 # ---------------------------------------------------------------------------------------------
@@ -209,7 +200,7 @@ for (row in 1:nrow(df.codes)) {
 # ---------------------------------------------------------------------------------------------
 
 # for zones added that do not have any biomass, change their biomass value from NA to 0 Mg
-df.sum <- mutate_at(df.sum, vars(matches('agb|agc|bgb|bgc|soc')), .funs = function(x) { ifelse(is.na(x), 0, x) })
+df.sum <- mutate_at(df.sum, vars(matches('agb|bgb|soc|bio|tot')), .funs = function(x) { ifelse(is.na(x), 0, x) })
 
 cat(paste('Writing', csv.out, '...'), fill = T)
 fwrite(df.sum, file = csv.out, na = 'NA', row.names = F)
