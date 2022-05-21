@@ -36,33 +36,21 @@ def comp_bgb(r2s, f_agb, f_bgb):
 def main():
 	
 	# aboveground inputs
-	# f_agb_lst = ['Base_Cur_AGB_Mgha_500m.tif', 'Base_Pot_AGB_Mgha_500m.tif']
-	
 	f_agb_lst = [
-		'/home/sgorelik/data/pnas/RCP85y50mean_Pot_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50mean_Unr_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50bc_Pot_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50cc_Pot_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50gs_Pot_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50hd_Pot_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50he_Pot_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50ip_Pot_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50mc_Pot_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50mg_Pot_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50mi_Pot_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50mr_Pot_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50no_Pot_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50bc_Unr_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50cc_Unr_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50gs_Unr_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50hd_Unr_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50he_Unr_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50ip_Unr_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50mc_Unr_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50mg_Unr_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50mi_Unr_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50mr_Unr_AGB_MgCha_500m.tif',
-		'/home/sgorelik/data/pnas/RCP85y50no_Unr_AGB_MgCha_500m.tif'
+		'Base_Cur_AGB_Mgha_500m.tif',
+		'Base_Pot_AGB_Mgha_500m.tif',
+		'RCP85y50bc_Pot_AGB_MgCha_500m.tif',
+		'RCP85y50cc_Pot_AGB_MgCha_500m.tif',
+		'RCP85y50gs_Pot_AGB_MgCha_500m.tif',
+		'RCP85y50hd_Pot_AGB_MgCha_500m.tif',
+		'RCP85y50he_Pot_AGB_MgCha_500m.tif',
+		'RCP85y50ip_Pot_AGB_MgCha_500m.tif',
+		'RCP85y50mc_Pot_AGB_MgCha_500m.tif',
+		'RCP85y50mg_Pot_AGB_MgCha_500m.tif',
+		'RCP85y50mi_Pot_AGB_MgCha_500m.tif',
+		'RCP85y50mr_Pot_AGB_MgCha_500m.tif',
+		'RCP85y50no_Pot_AGB_MgCha_500m.tif',
+		'RCP85y50mean_Pot_AGB_MgCha_500m.tif'
 	]
 	
 	# compute belowground
