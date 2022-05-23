@@ -1,12 +1,12 @@
 #!/usr/bin/env Rscript
 # --------------------------------------------------------------------------------------------------
 #
-# make_zonal_stats_table.R
+# zonal_stats.R
 #
 # Command-line tool to compute zonal stats of global carbon density layers
 #
 # Usage:
-#   ./make_zonal_stats_table.R <inputs.csv> <carbon_summary.csv> [options]
+#   ./_zonal_stats.R <inputs.csv> <carbon_summary.csv> [options]
 #
 # --------------------------------------------------------------------------------------------------
 
