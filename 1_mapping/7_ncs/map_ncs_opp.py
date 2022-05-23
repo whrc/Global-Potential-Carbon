@@ -7,12 +7,12 @@ import pandas as pd
 # inputs
 # -----------------------------------------------------------------
 
-# biophysical thresholds
+# biophysical thresholds (MgC/ha)
 brl_bt = 5
 tmp_bt = 5
 trp_bt = 20
 
-# commercial thresholds
+# commercial thresholds (MgC/ha)
 brl_ct = 50
 tmp_ct = 75
 trp_ct = 110
